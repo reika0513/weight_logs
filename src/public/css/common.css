@@ -1,0 +1,12 @@
+.header {
+    background-color: #FFFFFF;
+    max-width: 1512px;
+}
+
+.header_inner {
+    height: 53px;
+}
+
+.header__logo {
+    text-decoration: none;
+}
