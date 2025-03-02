@@ -15,11 +15,13 @@
           体重目標設定
         </a>
       </button>
-      <button class="header__button-logout">
-        <a class="header__button-logout_logo" href="/logout">
-          ログアウト
-        </a>
-      </button>
+      <form class="logout_form" action="/logout" method="post">
+        <button class="header__button-logout">
+          <a class="header__button-logout_logo" href="/logout">
+            ログアウト
+          </a>
+        </button>
+      </form>
     </div>
 </header>
 

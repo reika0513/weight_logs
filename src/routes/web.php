@@ -14,8 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/weight_logs', [WeightController::class, 'index']);
 Route::get('/weight_logs/store', [WeightController::class, 'store']);
 Route::post('/weight_logs/create', [WeightController::class, 'create']);
 Route::get('/wight_logs/goal_setting/form', [WeightController::class, 'target']);
+Route::get('/register/step1', [WeightController::class, 'register']);
 
+Route::middleware('auth')->group(function () {
+    Route::get('/weight_logs', [WeightController::class, 'index']);
+ });

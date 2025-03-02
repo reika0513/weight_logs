@@ -14,6 +14,10 @@ class WeightController extends Controller
         return view('index', compact('weights'));
     }
 
+    public function register(){
+        return view('');
+    }
+
     public function store(){
         return view('create');
     }

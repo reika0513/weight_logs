@@ -1,0 +1,81 @@
+.register{
+    height: 982px;
+    background: linear-gradient(135deg, #fbcfff, #ffb9e0);
+}
+
+.register_form{
+    height: 721px;
+    width: 580px;
+    background-color: #ffffff;
+    border-radius: 24px;
+    padding: 40px;
+    margin: 0px auto;
+}
+
+.register_header{
+    text-align: center;
+    font-family: "Times New Roman", "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "HiraMinProN-W3", "HGS明朝E", "ＭＳＰ明朝", "MS PMincho", serif;
+}
+
+.register_header-logo{
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 76.8px;
+    margin: 0px;
+    color: #EC87EF;
+}
+
+.register_header-head1{
+    font-size: 30px;
+    font-weight: 400;
+    margin: 10px 0px;
+}
+
+.register_header-head2{
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.form_group{
+    margin-top: 30px;
+}
+
+.form_label--item{
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.form_group-text_name, .form_group-text_email, .form_group-text_password{
+    width: 500px;
+    height: 43px;
+    border: solid 1px #E0DFDE;
+    border-radius: 5px;
+    padding: 11px 10px;
+}
+
+.form_button {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.form__button-submit{
+    text-align: center;
+    color: #FFFFFF;
+    background: linear-gradient(90deg, #A3A6E1, #FFABD9);
+    width: 250px;
+    height: 50px;
+    border-radius: 12px;
+    border: none;
+    font-weight: 600;
+    padding: 10px;    
+}
+
+.login_form{
+    text-align: center;
+    margin-top: 25px;
+}
+
+.login_form-button{
+    font-size: 16px;
+    color: #2C99FF;
+}
