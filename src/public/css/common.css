@@ -1,12 +1,70 @@
 .header {
     background-color: #FFFFFF;
-    max-width: 1512px;
-}
-
-.header_inner {
-    height: 53px;
+    height: 71px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border: solid 1px #CDCDCD;
 }
 
 .header__logo {
     text-decoration: none;
+    font-size: 40px;
+    color: #EC87EF;
+    font-family: "Times New Roman", "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "HiraMinProN-W3", "HGS明朝E", "ＭＳＰ明朝", "MS PMincho", serif;
+}
+
+.header__button-setting, .header__button-logout{
+    padding: 10px;
+    margin-left: 20px;
+    height: 44px;
+    border: solid 1px #CDCDCD;
+    border-radius: 5px;
+}
+
+.header__button-setting_logo, .header__button-logout_logo{
+    position: relative;
+    font-size: 16px;
+    color: #333333;
+    text-decoration: none;
+}
+
+.weight {
+    background-color: #F9F9F9;
+    padding: 70px 196px;
+}
+
+.weight_heading{
+    color: #333333;
+    width: 1120px;
+    height: 154px;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    margin: 0 auto;
+}
+
+.weight_heading-target{
+    width: 230px;
+    height: 94px;
+}
+
+.weight_heading-target--label{
+    font-size: 16px;
+    margin: 0px 0px 9px 0px;
+}
+
+.weight_heading-target--text{
+    max-width: 100px;
+    font-size: 40px;
+    font-weight: 600;
+    border: none;
+}
+
+.weight_heading-target--span{
+    margin-left: 5px;
+    font-size: 16px;
+
 }

@@ -6,28 +6,26 @@
 
 @section('content')
 <header class="header">
-    <div class="header__inner">
-      <a class="header__logo" href="/weight_logs">
+    <a class="header__logo" href="/weight_logs">
         PiGly
-      </a>
-      <div class="header__button">
-        <button class="header__button-setting">
-          <a href="/wight_logs/goal_setting">
-            体重目標設定
-          </a>
-        </button>
-        <button class="header__button-logout">
-          <a href="/logout">
-            ログアウト
-          </a>
-        </button>
-      </div>
+    </a>
+    <div class="header__button">
+      <button class="header__button-setting">
+        <a class="header__button-setting_logo" href="/wight_logs/goal_setting/form">
+          体重目標設定
+        </a>
+      </button>
+      <button class="header__button-logout">
+        <a class="header__button-logout_logo" href="/logout">
+          ログアウト
+        </a>
+      </button>
     </div>
 </header>
 
 <main>
-  <div class="weight_create_form">
-    <div class="weight_create_header">
+  <div class="weight">
+    <div class="weight_heading">
       <h1>Weight Log</h1>
     </div>
     <form class="form" action="/weight_logs/create" method="post">
@@ -114,5 +112,6 @@
         <button class="form__button-delete" type="delete" name="delete" value="delete">削除</button>
       </div>
     </form>
-  </div></main>
+  </div>
+</main>
 @endsection

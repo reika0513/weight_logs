@@ -18,8 +18,8 @@ class WeightController extends Controller
         return view('create');
     }
 
-        public function detail(){
-        return view('detail');
+    public function target(Request $request){
+        return view('goal');
     }
 
     public function create(Request $request){

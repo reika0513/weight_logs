@@ -85,6 +85,9 @@
             </div>
           </div>
         </div>
+        <div>
+          <input class="form_group-text_user_id" type="text" name="user_id">
+        </div>
       </div>
       <div class="form_button">
         <button class="form__button-back" type="button" onClick="history.back()">戻る</button>
