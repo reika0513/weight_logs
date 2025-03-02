@@ -7,8 +7,8 @@
 @section('content')
 <main>
   <div class="weight_create_form">
-    <div class="weight_create_header">
-      <h1>Weight Logを追加</h1>
+    <div>
+      <h1 class="weight_create_header">Weight Logを追加</h1>
     </div>
     <form class="form" action="/weight_logs/create" method="post">
       @csrf
@@ -35,7 +35,7 @@
           <div class="form_group-content">
             <div class="form_group-text">
               <input class="form_group-text_weight" type="text" name="weight" placeholder="50.0">
-              <span class="form_group-text--label">kg</span>
+              <p class="form_group-text--label">kg</p>
             </div>
             <div class="form_error">
               <!-- エラーメッセージ -->
@@ -49,8 +49,8 @@
           </div>
           <div class="form_group-content">
             <div class="form_group-text">
-              <input class="form_group-text_date" type="text" name="calories" placeholder="1200">
-              <span class="form_group-text--label">cal</span>
+              <input class="form_group-text_calories" type="text" name="calories" placeholder="1200">
+              <p class="form_group-text--label">cal</p>
             </div>
             <div class="form_error">
               <!-- エラーメッセージ -->
@@ -64,7 +64,7 @@
           </div>
           <div class="form_group-content">
             <div class="form_group-text">
-              <input class="form_group-text_date" type="time" name="exercise_time" placeholder="00:00">
+              <input class="form_group-text_time" type="time" name="exercise_time" placeholder="00:00">
             </div>
             <div class="form_error">
               <!-- エラーメッセージ -->
@@ -78,7 +78,7 @@
           </div>
           <div class="form_group-content">
             <div class="form_group-text">
-              <textarea class="form_group-text_date" name="exercise_content" placeholder="運動内容を追加" rows="10" cols="110"></textarea>
+              <textarea class="form_group-text_content" name="exercise_content" placeholder="運動内容を追加" rows="12" cols="100"></textarea>
             </div>
             <div class="form_error">
               <!-- エラーメッセージ -->
@@ -90,8 +90,8 @@
         </div>
       </div>
       <div class="form_button">
-        <button class="form__button-back" type="button" onClick="history.back()">戻る</button>
-        <button class="form__button-submit" type="submit">登録</button>
+        <button class="form_button-back" type="button" onClick="history.back()">戻る</button>
+        <button class="form_button-submit" type="submit">登録</button>
       </div>
     </form>
   </div>
