@@ -5,11 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Weight extends Model
+class Weights extends Model
 {
     use HasFactory;
     protected $fillable = [
         'user_id',
         'target_weight'
     ];
+
+    protected $table = 'weight';
 }

@@ -33,3 +33,8 @@
     background-color: #F9F9F9;
     padding: 70px 196px;
 }
+
+.form_error{
+    color: #F65A5A;
+    font-size: 14px;
+}

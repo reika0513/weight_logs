@@ -31,7 +31,7 @@
     <div class="weight_heading">
       <div class="weight_heading-target">
         <p class="weight_heading-target--label">目標体重</p>
-        <input class="weight_table_description-date" type="target_weight" name="target_weight" value="{{ $target('target_weight') }}" readonly /><!-- 目標体重の変数 -->
+        <input class="weight_table_description-date" type="target_weight" name="target_weight" value="" readonly /><!-- 目標体重の変数 -->
         <span class="weight_heading-target--span">kg</span>
       </div>
       <div class="weight_heading-target">
@@ -70,7 +70,7 @@
           @foreach ($weights as $weight)
           <tr class="weigh_table__row">
             <div class="weigh_table__row-form">
-              <form action="/weight_logs/{:weightLogId}" method="post">
+              <form action="/weight_logs/weightLogId" method="post">
                 @csrf
                 <div class="weigh_table_description">
                   <td class="weight_table_date">

@@ -13,7 +13,7 @@
                 <h2 class="register_header-head1">新規会員登録</h2>
                 <p class="register_header-head2">STEP1 アカウント情報の登録</p>
             </div>
-            <form action="/register/step1" class="form" method="post">
+            <form action="/register" class="form" method="post">
                 @csrf
                 <div class="form_frame">
                     <div class="form_group">
@@ -22,10 +22,12 @@
                         </div>
                         <div class="form_group-content">
                             <div class="form_group-text">
-                                <input class="form_group-text_name" type="text" name="name" placeholder="名前を入力">
+                                <input class="form_group-text_name" type="text" name="name" placeholder="名前を入力" value="{{ old('name') }}">
                             </div>
                             <div class="form_error">
-                                <!-- エラーメッセージ -->
+                                @error('name')
+                                    {{ $message }}
+                                @enderror
                             </div>
                         </div>
                     </div>
@@ -35,10 +37,12 @@
                         </div>
                         <div class="form_group-content">
                             <div class="form_group-text">
-                                <input class="form_group-text_email" type="email" name="email" placeholder="メールアドレスを入力">
+                                <input class="form_group-text_email" type="email" name="email" placeholder="メールアドレスを入力" value="{{ old('email') }}">
                             </div>
                             <div class="form_error">
-                                <!-- エラーメッセージ -->
+                                @error('email')
+                                    {{ $message }}
+                                @enderror
                             </div>
                         </div>
                     </div>
@@ -48,10 +52,12 @@
                         </div>
                         <div class="form_group-content">
                             <div class="form_group-text">
-                                <input class="form_group-text_password" type="password" name="password" placeholder="パスワードを入力">
+                                <input class="form_group-text_password" type="password" name="password" placeholder="パスワードを入力" value="{{ old('password') }}" >
                             </div>
                             <div class="form_error">
-                                <!-- エラーメッセージ -->
+                                @error('password')
+                                    {{ $message }}
+                                @enderror
                             </div>
                         </div>
                     </div>

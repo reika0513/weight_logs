@@ -24,7 +24,9 @@
                                 <input class="form_group-text_email" type="email" name="email">
                             </div>
                             <div class="form_error">
-                                <!-- エラーメッセージ -->
+                                @error('email')
+                                    {{ $message }}
+                                @enderror
                             </div>
                         </div>
                     </div>
@@ -37,7 +39,9 @@
                                 <input class="form_group-text_password" type="password" name="password">
                             </div>
                             <div class="form_error">
-                                <!-- エラーメッセージ -->
+                                @error('password')
+                                    {{ $message }}
+                                @enderror
                             </div>
                         </div>
                     </div>

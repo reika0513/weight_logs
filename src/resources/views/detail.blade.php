@@ -38,7 +38,7 @@
           </div>
           <div class="form_group-content">
             <div class="form_group-text">
-              <input class="form_group-text_date" type="date" name="date" value="">
+              <input class="form_group-text_date" type="date" name="date" value="{{ $weight['date'] }}">
             </div>
             <div class="form_error">
               <!-- エラーメッセージ -->
@@ -52,7 +52,7 @@
           </div>
           <div class="form_group-content">
             <div class="form_group-text">
-              <input class="form_group-text_weight" type="text" name="weight" placeholder="50.0" value="">
+              <input class="form_group-text_weight" type="text" name="weight" placeholder="50.0" value="{{ $weight['weight'] }}">
               <span class="form_group-text--label">kg</span>
             </div>
             <div class="form_error">
@@ -67,7 +67,7 @@
           </div>
           <div class="form_group-content">
             <div class="form_group-text">
-              <input class="form_group-text_date" type="text" name="calories" placeholder="1200" value="">
+              <input class="form_group-text_date" type="text" name="calories" placeholder="1200" value="{{ $weight['calories'] }}">
               <span class="form_group-text--label">cal</span>
             </div>
             <div class="form_error">
@@ -82,7 +82,7 @@
           </div>
           <div class="form_group-content">
             <div class="form_group-text">
-              <input class="form_group-text_date" type="time" name="exercise_time" placeholder="00:00" value="">
+              <input class="form_group-text_date" type="time" name="exercise_time" placeholder="00:00" value="{{ $weight['exercise_time'] }}">
             </div>
             <div class="form_error">
               <!-- エラーメッセージ -->
@@ -96,7 +96,7 @@
           </div>
           <div class="form_group-content">
             <div class="form_group-text">
-              <textarea class="form_group-text_date" name="exercise_content" placeholder="運動内容を追加" value="" rows="10" cols="110"></textarea>
+              <textarea class="form_group-text_date" name="exercise_content" placeholder="運動内容を追加" value="{{ $weight['exercise_content'] }}" rows="10" cols="110"></textarea>
             </div>
             <div class="form_error">
               <!-- エラーメッセージ -->

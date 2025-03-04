@@ -15,11 +15,14 @@
           体重目標設定
         </a>
       </button>
-      <button class="header__button-logout">
-        <a class="header__button-logout_logo" href="/logout">
-          ログアウト
-        </a>
-      </button>
+      <form action="/logout" method="post">
+        @csrf
+        <button class="header__button-logout">
+          <a class="header__button-logout_logo">
+            ログアウト
+          </a>
+        </button>
+      </form>
     </div>
 </header>
 
@@ -31,8 +34,9 @@
         @csrf
         <div class="form_frame">
           <div class="form_group-text">
-            <input class="form_group-text_weight" type="text" name="weight" value="">
+            <input class="form_group-text_weight" type="text" name="target_weight">
             <p class="form_group-text--label">kg</p>
+            <input type="text" name="user_id">
           </div>
           <div class="form_error">
             <!-- エラーメッセージ -->
