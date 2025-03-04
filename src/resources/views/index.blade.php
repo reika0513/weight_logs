@@ -15,9 +15,10 @@
           体重目標設定
         </a>
       </button>
-      <form class="logout_form" action="/logout" method="post">
+      <form action="/logout" method="post">
+        @csrf
         <button class="header__button-logout">
-          <a class="header__button-logout_logo" href="/logout">
+          <a class="header__button-logout_logo">
             ログアウト
           </a>
         </button>
@@ -30,7 +31,7 @@
     <div class="weight_heading">
       <div class="weight_heading-target">
         <p class="weight_heading-target--label">目標体重</p>
-        <input class="weight_heading-target--text" type="text" name="target_weight" value="" readonly /><!-- 目標体重の変数 -->
+        <input class="weight_table_description-date" type="target_weight" name="target_weight" value="{{ $target('target_weight') }}" readonly /><!-- 目標体重の変数 -->
         <span class="weight_heading-target--span">kg</span>
       </div>
       <div class="weight_heading-target">
