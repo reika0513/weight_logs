@@ -25,6 +25,7 @@
 
 <main>
   <div class="weight">
+    <div class="weight_detail_form">
     <div class="weight_heading">
       <h1>Weight Log</h1>
     </div>
@@ -38,10 +39,12 @@
           </div>
           <div class="form_group-content">
             <div class="form_group-text">
-              <input class="form_group-text_date" type="date" name="date" value="{{ $weight['date'] }}">
+              <input class="form_group-text_date" type="date" name="weight_date">
             </div>
             <div class="form_error">
-              <!-- エラーメッセージ -->
+              @error('date')
+                {{ $message }} 
+              @enderror
             </div>
           </div>
         </div>
@@ -52,11 +55,13 @@
           </div>
           <div class="form_group-content">
             <div class="form_group-text">
-              <input class="form_group-text_weight" type="text" name="weight" placeholder="50.0" value="{{ $weight['weight'] }}">
+              <input class="form_group-text_weight" type="text" name="weight_weight">
               <span class="form_group-text--label">kg</span>
             </div>
             <div class="form_error">
-              <!-- エラーメッセージ -->
+              @error('weight')
+                {{ $message }} 
+              @enderror
             </div>
           </div>
         </div>
@@ -67,11 +72,13 @@
           </div>
           <div class="form_group-content">
             <div class="form_group-text">
-              <input class="form_group-text_date" type="text" name="calories" placeholder="1200" value="{{ $weight['calories'] }}">
+              <input class="form_group-text_calories" type="text" name="weight_calories" >
               <span class="form_group-text--label">cal</span>
             </div>
             <div class="form_error">
-              <!-- エラーメッセージ -->
+              @error('calories')
+                {{ $message }} 
+              @enderror
             </div>
           </div>
         </div>
@@ -82,24 +89,27 @@
           </div>
           <div class="form_group-content">
             <div class="form_group-text">
-              <input class="form_group-text_date" type="time" name="exercise_time" placeholder="00:00" value="{{ $weight['exercise_time'] }}">
+              <input class="form_group-text_time" type="time" name="weight_exercise_time">
             </div>
             <div class="form_error">
-              <!-- エラーメッセージ -->
+              @error('exercise_time')
+                {{ $message }} 
+              @enderror
             </div>
           </div>
         </div>
         <div class="form_group">
           <div class="form_group-title">
             <span class="form_label--item">運動内容</span>
-            <span class="form__label--required">必須</span>
           </div>
           <div class="form_group-content">
             <div class="form_group-text">
-              <textarea class="form_group-text_date" name="exercise_content" placeholder="運動内容を追加" value="{{ $weight['exercise_content'] }}" rows="10" cols="110"></textarea>
+              <textarea class="form_group-text_content" name="weight_exercise_content" rows="10" cols="110"></textarea>
             </div>
             <div class="form_error">
-              <!-- エラーメッセージ -->
+              @error('exercise_content')
+                {{ $message }} 
+              @enderror
             </div>
           </div>
         </div>
@@ -112,6 +122,7 @@
         <button class="form__button-delete" type="delete" name="delete" value="delete">削除</button>
       </div>
     </form>
+    </div>
   </div>
 </main>
 @endsection

@@ -15,12 +15,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/weight_logs/store', [WeightController::class, 'store']);
-Route::post('/weight_logs/create', [WeightController::class, 'create']);
 Route::get('/wight_logs/goal_setting/form', [WeightController::class, 'goal']);
-Route::post('/weight_logs/weightLogId', [WeightController::class, 'detail']);
+Route::get('/weight_logs/detail', [WeightController::class, 'detail']);
 
 Route::middleware('auth')->group(function () {
     Route::get('/weight_logs', [WeightController::class, 'index']);
+    Route::post('/weight_logs/create', [WeightController::class, 'create']);
     Route::post('/logout', [WeightController::class, 'logout']);
     Route::post('/wight_logs/goal_setting', [WeightController::class, 'target']);
 });

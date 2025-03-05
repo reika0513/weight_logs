@@ -21,6 +21,15 @@
     margin-left: 5px;
 }
 
+.form__label--required {
+    background-color: #F65A5A;
+    padding: 5px;
+    font-size: 12px;
+    border-radius: 3px;
+    color: #FFFFFF;
+    height: 18px;
+}
+
 .form_group-text_date,
 .form_group-text_time, .form_group-text_weight,
 .form_group-text_calories{

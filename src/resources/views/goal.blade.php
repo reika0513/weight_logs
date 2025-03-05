@@ -34,9 +34,9 @@
         @csrf
         <div class="form_frame">
           <div class="form_group-text">
-            <input class="form_group-text_weight" type="text" name="target_weight">
+            <input class="form_group-text_weight" type="text" name="target_weight" value="{{ old('target_weight') }}">
             <p class="form_group-text--label">kg</p>
-            <input type="text" name="user_id">
+            <input type="hidden" name="user_id" value="{{ Auth::id() }}">
           </div>
           <div class="form_error">
             <!-- エラーメッセージ -->

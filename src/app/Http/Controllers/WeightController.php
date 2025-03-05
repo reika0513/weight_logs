@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\WeightRequest;
 use App\Models\User;
 use App\Models\Weights;
 use App\Models\Weight_logs_;
@@ -11,8 +12,8 @@ class WeightController extends Controller
 {
     public function index(){
         $weights = Weight_logs_::all();
-        $targets = Weights::all();
-        return view('index', compact('weights', 'targets'));
+        $weights = Weight_logs_::Paginate(8);
+        return view('index', compact('weights'));
     }
 
     public function store(){
@@ -23,12 +24,11 @@ class WeightController extends Controller
         return view('goal');
     }
 
-    public function detail(){
-        $weights = Weight_logs_::all();
-        return view('detail', compact('weights'));
+    public function detail(Request $request){
+        return view('detail');
     }
 
-    public function create(Request $request){
+    public function create(WeightRequest $request){
         $weight = $request->only(['id', 'user_id', 'date', 'weight', 'calories', 'exercise_time', 'exercise_content']);
         Weight_logs_::create($weight);
         return redirect('/weight_logs');
